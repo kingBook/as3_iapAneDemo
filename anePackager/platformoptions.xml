@@ -1,0 +1,5 @@
+<platform xmlns="http://ns.adobe.com/air/extension/3.1"> 
+    <linkerOptions> 
+        <option>-framework Storekit</option>
+    </linkerOptions> 
+</platform>
