@@ -115,6 +115,8 @@ ANE_FUNCTION(initialize){
 ANE_FUNCTION(buyProduct){
 	NSString* productID=getStringFromFREObject(argv[0]);
 	//
+	[IAPShare sharedHelper].iap=nil;
+	//
     if(![IAPShare sharedHelper].iap){
 		NSSet* dataSet = [[NSSet alloc] initWithObjects:productID, nil];
 		[IAPShare sharedHelper].iap = [[IAPHelper alloc] initWithProductIdentifiers:dataSet];
